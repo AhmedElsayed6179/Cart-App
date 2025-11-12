@@ -13,7 +13,7 @@ function Cart() {
 
     return (
         <Container>
-            <h1 className="py-5">Welcome to Cart</h1>
+            <h1 className="py-5">Welcome to Cart by shimaa</h1>
             <Button className="mb-3" variant="primary" onClick={() => dispatch(clear())}>Clear Cart</Button>
             <h5>Total price: {totalPrice.toFixed(2)}$</h5>
             <Table striped bordered hover size="sm">
