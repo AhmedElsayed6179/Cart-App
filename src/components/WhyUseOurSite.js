@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { showComingSoon } from "./cart-alerts";
 
 function WhyUseOurSite() {
     return (
@@ -16,7 +17,7 @@ function WhyUseOurSite() {
                         <Card.Text className="text-dark mb-3">
                             Navigate our website effortlessly, find products in seconds, and add them to your cart with a single click.
                         </Card.Text>
-                        <Button variant="primary" size="sm">Learn More</Button>
+                        <Button variant="primary" size="sm" onClick={showComingSoon}>Learn More</Button>
                     </Card>
                 </Col>
 
@@ -28,7 +29,7 @@ function WhyUseOurSite() {
                         <Card.Text className="text-dark mb-3">
                             All your personal and payment information is fully protected using advanced encryption and security protocols.
                         </Card.Text>
-                        <Button variant="success" size="sm">Learn More</Button>
+                        <Button variant="success" size="sm" onClick={showComingSoon}>Learn More</Button>
                     </Card>
                 </Col>
 
@@ -38,9 +39,9 @@ function WhyUseOurSite() {
                         <i className="bi bi-truck display-3 text-warning mb-3"></i>
                         <Card.Title className="fw-bold mb-3">Fast Delivery</Card.Title>
                         <Card.Text className="text-dark mb-3">
-                            Get your products delivered quickly and track your orders in real-time, anywhere you are.
+                            Get your products delivered fast and track orders in real-time, anywhere. Enjoy exclusive deals and support.
                         </Card.Text>
-                        <Button variant="warning" size="sm">Learn More</Button>
+                        <Button variant="warning" size="sm" onClick={showComingSoon}>Learn More</Button>
                     </Card>
                 </Col>
             </Row>

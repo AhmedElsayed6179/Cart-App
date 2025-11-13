@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +14,8 @@ function Products() {
 
     const [expanded, setExpanded] = useState({});
 
+    const [loading, setLoading] = useState(true);
+
     const [selectedCategory, setSelectedCategory] = useState("all");
 
     const filteredProducts = selectedCategory === "all"
@@ -26,14 +28,26 @@ function Products() {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchProducts());
-    }, [dispatch])
-
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
         showAddToCartAlert(product);
     };
+
+    useEffect(() => {
+        setLoading(true);
+        dispatch(fetchProducts()).finally(() => setLoading(false));
+    }, [dispatch]);
+
+    if (loading) {
+        return (
+            <Container className="py-5 text-center mt-5">
+                <Spinner animation="border" variant="primary" role="status" style={{ width: '4rem', height: '4rem' }}>
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                <p className="mt-3 fw-bold">Loading Products...</p>
+            </Container>
+        );
+    }
 
     return (
         <Container className="py-5">

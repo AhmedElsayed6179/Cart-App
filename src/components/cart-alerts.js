@@ -39,3 +39,16 @@ export const showAddToCartAlert = (product) => {
         position: "top-end",
     });
 };
+
+export const showComingSoon = (product) => {
+    Swal.fire({
+        title: "Coming Soon 🚧",
+        icon: "info",
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "OK",
+        timer: 2000,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+    });
+};
