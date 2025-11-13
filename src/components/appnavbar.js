@@ -8,23 +8,35 @@ import { Badge } from "react-bootstrap";
 function AppNavbar() {
     const cart = useSelector(state => state.cart);
     return (
-        <Navbar fixed='top' expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" fixed="top" bg="white" className="shadow-sm py-2">
             <Container>
-                <Link to="/" className='navbar-brand'>CartApp</Link>
+                <Link to="/" className="navbar-brand fw-bold text-primary fs-3">
+                    CartApp
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Link to="/" className='nav-link'>Home</Link>
-                        <Link to="/products" className='nav-link'>Products</Link>
-                        <Link to="/cart" className="nav-link d-flex align-items-center gap-2 fw-bold">
+                    <Nav className="ms-auto align-items-center">
+                        <Link to="/" className="nav-link fw-medium mx-2 text-dark">
+                            Home
+                        </Link>
+                        <Link to="/products" className="nav-link fw-medium mx-2 text-dark">
+                            Products
+                        </Link>
+                        <Link
+                            to="/cart"
+                            className="nav-link d-flex align-items-center gap-2 fw-bold position-relative"
+                        >
                             🛒 Cart
-                            <Badge
-                                bg="primary"
-                                className="rounded-pill px-2 py-1"
-                                style={{ minWidth: "24px", textAlign: "center", fontWeight: "500" }}
-                            >
-                                {cart.length}
-                            </Badge>
+                            {cart.length > 0 && (
+                                <Badge
+                                    bg="danger"
+                                    pill
+                                    className="position-absolute top-0 start-100 translate-middle"
+                                    style={{ fontSize: "0.75rem", minWidth: "20px", height: "20px" }}
+                                >
+                                    {cart.length}
+                                </Badge>
+                            )}
                         </Link>
                     </Nav>
                 </Navbar.Collapse>
