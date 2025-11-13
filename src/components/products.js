@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../rtk/slices/products-slice';
 import { addToCart } from '../rtk/slices/cart-slice';
-import Swal from 'sweetalert2'
+import { showAddToCartAlert } from './cart-alerts';
 
 function Products() {
     const products = useSelector((state) => state.products);
@@ -24,17 +24,7 @@ function Products() {
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
-        Swal.fire({
-            title: "Added to Cart 🛒",
-            text: `${product.title} has been added successfully!`,
-            icon: "success",
-            confirmButtonColor: "#3085d6",
-            confirmButtonText: "OK",
-            timer: 2000,
-            showConfirmButton: false,
-            toast: true,
-            position: "top-end",
-        });
+        showAddToCartAlert(product);
     };
 
     return (
