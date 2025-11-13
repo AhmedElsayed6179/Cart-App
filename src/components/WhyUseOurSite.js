@@ -1,46 +1,51 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 function WhyUseOurSite() {
     return (
-        <Container className="py-5 my-5">
-            <h2 className="text-center fw-bold mb-5">Why Use Our Site? 🤩</h2>
-            <Row className="g-4">
-                <Col md={4} className="mb-4">
-                    <Card className="h-100 text-center border-0 rounded-4 p-3 hover-zoom" style={{ backgroundColor: "#e0f7fa" }}>
-                        <Card.Body>
-                            <i className="bi bi-speedometer2 display-4 text-primary mb-3"></i>
-                            <Card.Title className="fw-bold">Fast & Intuitive</Card.Title>
-                            <Card.Text className="text-dark">
-                                Navigate easily and find your favorite products without hassle.
-                            </Card.Text>
-                        </Card.Body>
+        <Container fluid className="py-5 mt-5" style={{ backgroundColor: "#f8f9fa" }}>
+            <h2 className="text-center fw-bold mb-5 display-5">
+                Why Choose <span className="text-primary">CartApp?</span> 🤩
+            </h2>
+
+            <Row className="g-4 justify-content-center">
+                {/* Feature 1 */}
+                <Col md={6} lg={4}>
+                    <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#e0f7fa" }}>
+                        <i className="bi bi-speedometer2 display-3 text-primary mb-3"></i>
+                        <Card.Title className="fw-bold mb-3">Fast & Intuitive</Card.Title>
+                        <Card.Text className="text-dark mb-3">
+                            Navigate our website effortlessly, find products in seconds, and add them to your cart with a single click.
+                        </Card.Text>
+                        <Button variant="primary" size="sm">Learn More</Button>
                     </Card>
                 </Col>
-                <Col md={4} className="mb-4">
-                    <Card className="h-100 text-center border-0 rounded-4 p-3 hover-zoom" style={{ backgroundColor: "#e8f5e9" }}>
-                        <Card.Body>
-                            <i className="bi bi-shield-lock-fill display-4 text-success mb-3"></i>
-                            <Card.Title className="fw-bold">Secure & Reliable</Card.Title>
-                            <Card.Text className="text-dark">
-                                Your personal information is protected with top-notch security.
-                            </Card.Text>
-                        </Card.Body>
+
+                {/* Feature 2 */}
+                <Col md={6} lg={4}>
+                    <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#e8f5e9" }}>
+                        <i className="bi bi-shield-lock-fill display-3 text-success mb-3"></i>
+                        <Card.Title className="fw-bold mb-3">Secure & Reliable</Card.Title>
+                        <Card.Text className="text-dark mb-3">
+                            All your personal and payment information is fully protected using advanced encryption and security protocols.
+                        </Card.Text>
+                        <Button variant="success" size="sm">Learn More</Button>
                     </Card>
                 </Col>
-                <Col md={4} className="mb-4">
-                    <Card className="h-100 text-center border-0 rounded-4 p-3 hover-zoom" style={{ backgroundColor: "#fff3e0" }}>
-                        <Card.Body>
-                            <i className="bi bi-truck display-4 text-warning mb-3"></i>
-                            <Card.Title className="fw-bold">Fast Delivery</Card.Title>
-                            <Card.Text className="text-dark">
-                                Get your orders quickly and track them in real-time.
-                            </Card.Text>
-                        </Card.Body>
+
+                {/* Feature 3 */}
+                <Col md={6} lg={4}>
+                    <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#fff3e0" }}>
+                        <i className="bi bi-truck display-3 text-warning mb-3"></i>
+                        <Card.Title className="fw-bold mb-3">Fast Delivery</Card.Title>
+                        <Card.Text className="text-dark mb-3">
+                            Get your products delivered quickly and track your orders in real-time, anywhere you are.
+                        </Card.Text>
+                        <Button variant="warning" size="sm">Learn More</Button>
                     </Card>
                 </Col>
             </Row>
         </Container>
-    )
+    );
 }
 
 export default WhyUseOurSite;
