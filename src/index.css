@@ -43,3 +43,8 @@ code {
 ::-webkit-scrollbar-corner {
   background: #121212;
 }
+
+body.swal2-shown {
+  overflow-y: scroll !important;
+  padding-right: 0 !important;
+}
