@@ -8,7 +8,7 @@ function Home() {
         <Container className="py-5">
             <Row className="align-items-center text-center text-md-start">
                 <Col md={6} className="mb-4 mb-md-0">
-                    <h1 className="fw-bold mb-3">
+                    <h1 className="fw-bold mb-3 mt-3">
                         Welcome to <span className="text-primary">CartApp</span> 🛒
                     </h1>
                     <p className="text-muted fs-5 mb-4">
