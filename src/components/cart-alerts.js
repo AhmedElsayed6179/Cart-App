@@ -26,6 +26,18 @@ export const showClearCartAlert = () => {
     });
 };
 
+export const CartisEmpty = () => {
+    Swal.fire({
+        title: "Cart is Empty 🛒",
+        text: "There are no products in the cart to remove!",
+        icon: "info",
+        timer: 2000,
+        showConfirmButton: false,
+        toast: true,
+        position: "top-end",
+    });
+};
+
 export const showAddToCartAlert = (product) => {
     Swal.fire({
         title: "Added to Cart 🛒",

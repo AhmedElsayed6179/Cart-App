@@ -1,7 +1,7 @@
 import { Container, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../rtk/slices/cart-slice";
-import { showClearCartAlert  } from "./cart-alerts";
+import { CartisEmpty, showClearCartAlert } from "./cart-alerts";
 import TableCard from "./table-card";
 
 function Cart() {
@@ -13,9 +13,15 @@ function Cart() {
     }, 0)
 
     const handleClearCart = () => {
+        if (cart.length === 0) {
+            CartisEmpty();
+            return;
+        }
+
         dispatch(clear());
         showClearCartAlert();
     };
+
 
     return (
         <Container className="py-5 text-center">

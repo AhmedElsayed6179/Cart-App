@@ -9,7 +9,6 @@ function WhyUseOurSite() {
             </h2>
 
             <Row className="g-4 justify-content-center">
-                {/* Feature 1 */}
                 <Col md={6} lg={4}>
                     <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#e0f7fa" }}>
                         <i className="bi bi-speedometer2 display-3 text-primary mb-3"></i>
@@ -21,7 +20,6 @@ function WhyUseOurSite() {
                     </Card>
                 </Col>
 
-                {/* Feature 2 */}
                 <Col md={6} lg={4}>
                     <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#e8f5e9" }}>
                         <i className="bi bi-shield-lock-fill display-3 text-success mb-3"></i>
@@ -33,7 +31,6 @@ function WhyUseOurSite() {
                     </Card>
                 </Col>
 
-                {/* Feature 3 */}
                 <Col md={6} lg={4}>
                     <Card className="h-100 text-center border-0 rounded-4 p-4 shadow-sm hover-zoom" style={{ backgroundColor: "#fff3e0" }}>
                         <i className="bi bi-truck display-3 text-warning mb-3"></i>
