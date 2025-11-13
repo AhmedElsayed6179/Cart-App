@@ -28,7 +28,7 @@ function Home() {
                         src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
                         alt="Shopping illustration"
                         fluid
-                        className="rounded-4 shadow-lg"
+                        className="rounded-4 shadow-lg mt-5"
                     />
                 </Col>
             </Row>
